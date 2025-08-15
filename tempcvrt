@@ -1,0 +1,28 @@
+#Create a class TemperatureConverter with a static method celsius_to_fahrenheit(c) that returns the Fahrenheit value.
+class TemperatureConverter:
+    @staticmethod
+    def celsius_to_fahrenheit(c):
+        """Static method to convert Celsius to Fahrenheit
+        
+        Args:
+            c (float): Temperature in Celsius
+            
+        Returns:
+            float: Temperature in Fahrenheit
+        """
+        return (c * 9/5) + 32
+
+# Get user input and perform conversion
+if __name__ == "__main__":
+    try:
+        # Step 1: Get Celsius input from user
+        celsius = float(input("Enter temperature in Celsius: "))
+        
+        # Step 2: Convert using static method
+        fahrenheit = TemperatureConverter.celsius_to_fahrenheit(celsius)
+        
+        # Step 3: Display result
+        print(f"{celsius}°C = {fahrenheit:.2f}°F")
+    
+    except ValueError:
+        print("Error: Please enter a valid number for temperature.")
